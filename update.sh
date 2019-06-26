@@ -10,7 +10,7 @@ fi
 versions=( "${versions[@]%/}" )
 
 allVersions="$(
-	git ls-remote --tags https://github.com/TryGhost/Ghost.git \
+	git ls-remote --tags https://github.com/shubhsherl/Ghost.git \
 		| cut -d$'\t' -f2 \
 		| grep -E '^refs/tags/[0-9]+\.[0-9]+' \
 		| cut -d/ -f3 \
@@ -19,7 +19,7 @@ allVersions="$(
 )"
 
 cliVersion="$(
-	git ls-remote --tags https://github.com/TryGhost/Ghost-CLI.git \
+	git ls-remote --tags https://github.com/shubhsherl/Ghost-CLI.git \
 		| cut -d$'\t' -f2 \
 		| grep -E '^refs/tags/[0-9]+\.[0-9]+' \
 		| cut -d/ -f3 \
